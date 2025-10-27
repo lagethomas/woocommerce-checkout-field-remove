@@ -69,9 +69,15 @@ class WCRF_Core {
         
         // Verifica se há campos marcados para remoção. Se não houver, não precisamos de filtros.
         if ( ! empty( $settings ) ) {
-            add_filter( 'woocommerce_billing_fields', array( $this, 'wcrf_remove_field_validation' ) );
-            add_filter( 'woocommerce_shipping_fields', array( $this, 'wcrf_remove_field_validation' ) );
-            add_filter( 'woocommerce_checkout_fields', array( $this, 'wcrf_remove_checkout_fields' ) );
+            
+            // *** CORREÇÃO APLICADA AQUI ***
+            // Define uma prioridade alta para garantir que estes filtros rodem
+            // depois de qualquer tema ou outro plugin.
+            $priority = 999;
+            
+            add_filter( 'woocommerce_billing_fields', array( $this, 'wcrf_remove_field_validation' ), $priority );
+            add_filter( 'woocommerce_shipping_fields', array( $this, 'wcrf_remove_field_validation' ), $priority );
+            add_filter( 'woocommerce_checkout_fields', array( $this, 'wcrf_remove_checkout_fields' ), $priority );
         }
     }
 

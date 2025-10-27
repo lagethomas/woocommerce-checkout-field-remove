@@ -2,12 +2,17 @@
 /**
  * Plugin Name: WooCommerce Checkout Field Remove
  * Description: Gerencia quais campos do checkout do WooCommerce devem ser removidos e desativa suas validações.
- * Version: 1.0.0
+ * Version: 1.0.1
  * TAG: true
  * Author: Thomas Marcelino
  * Author URI: https://wpmasters.com.br
  * License: GPL2
  */
+
+// Se não for definido, impede o acesso direto
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 // Define o versionamento do código (para CSS/JS) baseado no tempo atual para evitar cache
 if ( ! defined( 'WCRF_CODE_VERSION' ) ) {
@@ -16,7 +21,7 @@ if ( ! defined( 'WCRF_CODE_VERSION' ) ) {
 
 // Define a versão principal do plugin. Centralizamos a versão aqui.
 if ( ! defined( 'WCRF_PLUGIN_VERSION' ) ) {
-    define( 'WCRF_PLUGIN_VERSION', '1.0.0' ); // << Versão do Semantic Versioning
+    define( 'WCRF_PLUGIN_VERSION', '1.0.1' ); // << Versão do Semantic Versioning
 }
 
 // Define o caminho base do plugin.

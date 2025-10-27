@@ -1,0 +1,184 @@
+/**
+ * Estilos Modernos para a Página de Administração do WCRF
+ */
+
+.wcrf-admin-page {
+    max-width: 1200px; /* Aumenta a largura para acomodar 3 colunas */
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.wcrf-heading-inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+/* Badge de Versão */
+.wcrf-badge {
+    display: inline-block;
+    background-color: #0073aa; /* Cor primária do WP */
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+/* Títulos de Agrupamento */
+.wcrf-group-title {
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #0073aa;
+}
+
+/* Grid de Cards (3 colunas) */
+.wcrf-fields-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo, 3 por linha */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Estilo do Card Individual */
+.wcrf-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-left: 5px solid #0073aa; /* Destaque */
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wcrf-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wcrf-card-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Estilo do Botão de Salvar */
+.wcrf-save-button {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    height: 40px !important;
+    line-height: 38px !important;
+}
+
+
+/* --- Estilo do Switch (Vanilla JS/CSS) (INALTERADO) --- */
+.wcrf-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    flex-shrink: 0; /* Garante que o switch não encolha */
+    margin-left: 15px;
+}
+
+.wcrf-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.wcrf-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.wcrf-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+/* Cor do Switch Ativado */
+input:checked + .wcrf-slider {
+    background-color: #4CAF50; /* Verde Harmônico */
+}
+
+input:focus + .wcrf-slider {
+    box-shadow: 0 0 1px #4CAF50;
+}
+
+input:checked + .wcrf-slider:before {
+    transform: translateX(26px);
+}
+
+/* Arredondamento (Round) */
+.wcrf-slider.round {
+    border-radius: 34px;
+}
+
+.wcrf-slider.round:before {
+    border-radius: 50%;
+}
+
+/* --- Estilos da Propaganda (INALTERADO) --- */
+.wcrf-ad-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f7f9fc; /* Cor de fundo suave */
+    border-left: 5px solid #0073aa; /* Destaque com a cor primária do WP */
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.wcrf-ad-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-size: 16px;
+}
+
+.wcrf-ad-content {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+.wcrf-ad-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #0073aa;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.wcrf-ad-button:hover {
+    background-color: #005a87;
+    color: #ffffff;
+}
